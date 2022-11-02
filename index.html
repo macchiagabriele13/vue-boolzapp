@@ -33,7 +33,7 @@
                         <i class="fa-solid fa-envelope px-1"></i>
                         <i class="fa-solid fa-envelope px-1"></i>
                     </div>
-                    
+
                 </div>
                 <div class="alert_box">
 
@@ -42,13 +42,14 @@
 
                 </div>
                 <div class="chats_box">
-                    <div class="align-items-center d-flex justify-content-between px-2 single_chat">
-                        
-                            <img class="user_avatar" src="./assets/img/avatar_1.jpg" alt="">
-                        
+                    <div class="align-items-center d-flex justify-content-between px-2 single_chat"
+                        v-for="(contact) in contacts">
+
+                        <img class="user_avatar" :src="`./assets/img/avatar` + contact.avatar + `.jpg`" alt="">
+
                         <div class="info_chat">
-                            <h3>Michele</h3>
-                            <span>Ultimo messaggio inviato</span>
+                            <h5>{{contact.name}}</h5>
+                            <small>Ultimo messaggio inviato</small>
                         </div>
                         <div class="timing align-self-baseline timing">
                             <span>12:00</span>
@@ -58,10 +59,28 @@
                 </div>
             </div>
             <div class="right_box">
-                <div class="profile_chat_box">
-
+                <div class="profile_chat_box border-start d-flex justify-content-between align-items-center p-2">
+                    <img class="user_avatar mx-2" :src="`./assets/img/avatar` + contacts[0].avatar + `.jpg`" alt="">
+                    <div class="info_chat w-100 py-1">
+                        <h5>{{contacts[0].name}}</h5>
+                        <small>Ultimo accesso alle ore 12:00</small>
+                    </div>
+                    <div class="actions w-100 text-end">
+                        <i class="fa-solid fa-magnifying-glass px-1"></i>
+                        <i class="fa-solid fa-paperclip px-1"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-1"></i>
+                    </div>
                 </div>
                 <div class="chat_box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <p>Ciao come stai</p>
+                                <p class="inviato">Tutto Bene?</p>
+                                <p class="ricevuto">Sisi, Tutto a posto</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="type_box">
@@ -70,7 +89,7 @@
             </div>
 
         </div>
-        
+
 
 
     </div>

@@ -106,6 +106,22 @@
     background-color: rgb(69, 69, 6);
 }
 
+.ricevuto{
+    background-color: white;
+    text-align: left;
+    border-radius: 10px;
+    width: max-content;
+    padding: 1.75rem;
+}
+
+.inviato{
+    background-color: green;
+    text-align: right;
+    border-radius: 10px;
+    width: max-content;
+    padding: 1.75rem;
+}
+
 .type_box{
     height: 8%;
     width: 100%;
