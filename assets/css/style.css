@@ -36,6 +36,7 @@
     background-color: aqua;
     margin: auto;
 }
+/* region Box Sinistro */
 
 .left_box{
     width: 30%;
@@ -48,6 +49,23 @@
     height: 8vh;
     width: 100%;
     background-color: red;
+}
+
+.user{
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.user_profile{
+    border-radius: 32px;
+    height: 15px;
+    width: 15px;
+}
+.user_avatar{
+    border-radius: 32px;
+    height: 30px;
+    width: 30px;
 }
 
 .alert_box{
@@ -67,6 +85,8 @@
     width: 100%;
     background-color: rgb(164, 136, 25);
 }
+
+/* endregion common Box Sinistro */
 
 .right_box{
     width: 70%;
