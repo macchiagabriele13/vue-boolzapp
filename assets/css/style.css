@@ -45,7 +45,7 @@
 
 
 .profile_box{
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     background-color: red;
 }
@@ -57,15 +57,39 @@
 }
 
 .search_box{
-    height: 10vh;
+    height: 5vh;
     width: 100%;
     background-color: rgb(203, 20, 231);
+}
+
+.chats_box{
+    height: 67vh;
+    width: 100%;
+    background-color: rgb(164, 136, 25);
 }
 
 .right_box{
     width: 70%;
     height: 100%;
     background-color: khaki;
+}
+
+.profile_chat_box{
+    height: 8%;
+    width: 100%;
+    background-color: beige;
+}
+
+.chat_box{
+    height: 84%;
+    width: 100%;
+    background-color: rgb(69, 69, 6);
+}
+
+.type_box{
+    height: 8%;
+    width: 100%;
+    background-color: rgb(25, 25, 9);
 }
 
 
