@@ -49,7 +49,7 @@
 .left_box {
     width: 30%;
     height: 100%;
-    background-color: var(--var-profilo);
+    background-color:  #E9E6E6;
 }
 
 
@@ -95,6 +95,7 @@
     height: 67vh;
     width: 100%;
     background-color: #E9E6E6;
+    overflow: auto;
 }
 
 .single_chat {
