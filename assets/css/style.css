@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,21 +7,28 @@
 :root {
     --bannerup: #009688;
     --bannerbottom: #D9DBD5;
+    --var-notifica: #84C4E3;
+    --var-iconeprofilo: #A3A0A0;
+    --var-profilo: #D6D3D3;
+    --var-chatattiva: #D6D4D4;
+    --var-backgroundsearch: #E5E1E1;
+    --var-searchinput: #E9E6E6;
+
 
 
 }
 
-.background{
+.background {
     position: relative;
 }
 
-.banner_up{
+.banner_up {
     background-color: var(--bannerup);
     height: 20vh;
 }
 
-.banner_bottom{
-    background-color:var(--bannerbottom);
+.banner_bottom {
+    background-color: var(--bannerbottom);
     height: 80vh;
 }
 
@@ -36,96 +43,122 @@
     background-color: aqua;
     margin: auto;
 }
+
 /* region Box Sinistro */
 
-.left_box{
+.left_box {
     width: 30%;
     height: 100%;
-    background-color: blue;
+    background-color: var(--var-profilo);
 }
 
 
-.profile_box{
+.profile_box {
     height: 8vh;
     width: 100%;
-    background-color: red;
+    background-color: var(--var-profilo);
 }
 
-.user{
+.user {
     height: 100%;
     padding: 5px;
-    text-align: center;
+    align-items: center;
 }
 
-.user_profile{
+.user_profile {
     border-radius: 32px;
-    height: 15px;
-    width: 15px;
-}
-.user_avatar{
-    border-radius: 32px;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
+    margin-right: 0.5rem;
 }
 
-.alert_box{
+.user_avatar {
+    border-radius: 32px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0.5rem;
+}
+
+.alert_box {
     height: 10vh;
     width: 100%;
-    background-color: rgb(105, 182, 207);
+    background-color: var(--var-notifica);
 }
 
-.search_box{
+.search_box {
     height: 5vh;
     width: 100%;
-    background-color: rgb(203, 20, 231);
+    background-color: var(--var-backgroundsearch);
 }
 
-.chats_box{
+.chats_box {
     height: 67vh;
     width: 100%;
-    background-color: rgb(164, 136, 25);
+    background-color: #E9E6E6;
+}
+
+.single_chat {
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem;
+}
+
+.active {
+    background-color: var(--var-chatattiva);
 }
 
 /* endregion common Box Sinistro */
 
-.right_box{
+.right_box {
     width: 70%;
     height: 100%;
     background-color: khaki;
 }
 
-.profile_chat_box{
+.profile_chat_box {
     height: 8%;
     width: 100%;
     background-color: beige;
 }
 
-.chat_box{
+.chat_box {
     height: 84%;
     width: 100%;
-    background-color: rgb(69, 69, 6);
+    background-image: url(../img/mine.jpg);
+    
 }
 
-.ricevuto{
+.mex_container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.ricevuto {
     background-color: white;
-    text-align: left;
-    border-radius: 10px;
-    width: max-content;
-    padding: 1.75rem;
+    border-radius: 0.5rem;
+    max-width: 200px;
+    align-self: flex-start;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
-.inviato{
+.inviato {
     background-color: green;
-    text-align: right;
-    border-radius: 10px;
-    width: max-content;
-    padding: 1.75rem;
+    border-radius: 0.5rem;
+    max-width: 200px;
+    align-self: flex-end;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
-.type_box{
+.type_box {
     height: 8%;
     width: 100%;
-    background-color: rgb(25, 25, 9);
+    background-color: var(--var-backgroundsearch);
 }
 
-
+.form-control{
+    width: 80%;
+}
