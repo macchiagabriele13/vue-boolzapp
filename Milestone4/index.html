@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Whatsapp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="background">
+            <div class="banner_up"></div>
+            <div class="banner_bottom"></div>
+
+        </div>
+        <div class="main_box d-flex">
+            <div class="left_box">
+                <div class="align-items-center d-flex justify-content-between profile_box">
+                    <div class="user d-flex">
+                        <img class="user_profile" src="./assets/img/avatar_1.jpg" alt="">
+                        <span>Sofia</span>
+                    </div>
+                    <div class="icons px-1">
+                        <i class="fa-solid fa-envelope px-1"></i>
+                        <i class="fa-solid fa-envelope px-1"></i>
+                        <i class="fa-solid fa-envelope px-1"></i>
+                    </div>
+
+                </div>
+                <div class="alert_box">
+                    <div class="notifications d-flex p-3">
+                        <div class="bell d-flex justify-content-center align-items-center rounded-circle">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                    </div>
+                    <div class="search_box">
+
+                    </div>
+
+                    <div class="chats_box">
+                        <div class="align-items-center d-flex justify-content-between px-2 single_chat"
+                            v-for="(contact, index) in contacts" @click="setActiveIndex(index)"
+                            :class="activeIndex === index ? 'active' : ''">
+
+                            <div class="friend_profile d-flex align-items-center">
+                                <img class="user_avatar" :src="`./assets/img/avatar` + contact.avatar + `.jpg`" alt="">
+
+                                <div class="info_chat">
+                                    <h5>{{contact.name}}</h5>
+                                    <small>Ultimo messaggio inviato</small>
+                                </div>
+                            </div>
+
+                            <div class="timing align-self-baseline timing">
+                                <span>12:00</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="right_box">
+                <div class="profile_chat_box border-start d-flex justify-content-between align-items-center p-2">
+
+
+                    <img class="user_avatar mx-2" :src="`./assets/img/avatar` + contacts[activeIndex].avatar + `.jpg`"
+                        alt="">
+
+                    <div class="info_chat w-100 py-1">
+                        <h5>{{contacts[activeIndex].name}}</h5>
+                        <small>Ultimo accesso alle ore 12:00</small>
+                    </div>
+
+                    <div class="actions w-100 text-end">
+                        <i class="fa-solid fa-magnifying-glass px-1"></i>
+                        <i class="fa-solid fa-paperclip px-1"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-1"></i>
+                    </div>
+
+                </div>
+
+                <div class="chat_box">
+                    <div class="mex_container">
+                        <div class="messages d-flex" v-for="(msg, index) in contacts[activeIndex].messages"
+                            :class="contacts[activeIndex].messages[index].status === 'sent' ? 'inviato' : 'ricevuto'">
+                            <div>{{msg.message}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="type_box d-flex align-items-center justify-content-evenly py-2">
+
+                    <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                    <input class="form-control" type="text" v-model="newSent.message" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio"
+                        aria-label="default placeholder">
+                    <a href="#"><i class="fa-solid fa-microphone"></i></a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
