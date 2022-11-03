@@ -100,7 +100,7 @@
                 <div class="type_box d-flex align-items-center justify-content-evenly py-2">
 
                     <a href="#"><i class="fa-regular fa-face-smile"></i></a>
-                    <input class="form-control" type="text" placeholder="Scrivi un messaggio"
+                    <input class="form-control" type="text" v-model="newSent.message" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio"
                         aria-label="default placeholder">
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>
 

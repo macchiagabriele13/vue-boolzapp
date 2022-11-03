@@ -3,6 +3,16 @@
   createApp({
     data() {
       return {
+        newSent: {
+            date: new Date(),
+            message: '',
+            status: 'sent'
+        },
+        newReceived: {
+            date: new Date(),
+            message: 'Ok!',
+            status: 'received'
+        },
         contacts: [
           {
               name: 'Michele',
@@ -173,6 +183,53 @@
       setActiveIndex(index) {
         this.activeIndex = index
 
-      }
+      },
+
+
+      /* ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+      “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+      
+      Esercizio simile a quello della To do List, dove inserisco il messaggio e cliccando enter lo vado a pushare all'interno del mio Arrey */
+
+
+      addNewMessage(){
+        const newMessage = {
+            ...this.newSent
+          }
+        console.log('ho cliccato enter');
+        this.contacts[this.activeIndex].messages.push(newMessage)
+        this.newSent.message = ''
+        this.addReceivedMessage()
+      },
+
+      addReceivedMessage(){
+        setTimeout(() => {
+            
+        this.contacts[this.activeIndex].messages.push(this.newReceived)
+        }, 1000);
+      },
+
+      time(i){
+        const time = new Date (this.contacts[i].messages[this.contacts[i].messages.length - 1].date);
+        console.log(time);
+        const hoursAndMinutes = time.getHours() + ':' + time.getMinutes();
+        return hoursAndMinutes;
+
+    }
     }
   }).mount('#app')
+
+
+ /*  Milestone 3
+● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
+
+Esercizio simile a quello della To do List, dove inserisco il messaggio e cliccando enter lo vado a pushare all'interno del mio Arrey
+
+
+● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+un “ok” come risposta, che apparirà dopo 1 secondo.
+
+All'interno della funzione per creare il messaggio e inserirlo nell'arrey, metto un SetInterval o qualcosa del genere per farsì che dopo 1 secondo succeda qualcosa, quel qualcosa sarà un messaggio di ok, con classe ricevuto da inserire sempre nell'array
+
+*/
