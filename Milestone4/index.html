@@ -41,12 +41,21 @@
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
                     </div>
-                    <div class="search_box">
+                </div>
 
-                    </div>
+                 <div class="search_box">
 
-                    <div class="chats_box">
-                        <div class="align-items-center d-flex justify-content-between px-2 single_chat"
+                        <span class="bg-white input-group-text rounded-0" id="addon-wrapping">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" v-model='searchName' @input="searchContact" class="border-start-0 form-control rounded-0 w-100"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat"
+                            aria-describedby="addon-wrapping" />
+
+                </div>
+
+                 <div class="chats_box">
+                        <div v-show="contact.visible" class="align-items-center justify-content-between px-2 single_chat"
                             v-for="(contact, index) in contacts" @click="setActiveIndex(index)"
                             :class="activeIndex === index ? 'active' : ''">
 
@@ -64,8 +73,8 @@
                             </div>
                         </div>
 
-                    </div>
                 </div>
+               
 
             </div>
             <div class="right_box">
@@ -100,8 +109,8 @@
                 <div class="type_box d-flex align-items-center justify-content-evenly py-2">
 
                     <a href="#"><i class="fa-regular fa-face-smile"></i></a>
-                    <input class="form-control" type="text" v-model="newSent.message" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio"
-                        aria-label="default placeholder">
+                    <input class="form-control" type="text" v-model="newSent.message" @keyup.enter="addNewMessage"
+                        placeholder="Scrivi un messaggio" aria-label="default placeholder">
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>
 
                 </div>
