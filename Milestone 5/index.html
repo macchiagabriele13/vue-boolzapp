@@ -102,8 +102,7 @@
                         <div class="messages d-flex" v-for="(msg, index) in contacts[activeIndex].messages"
                             :class="contacts[activeIndex].messages[index].status === 'sent' ? 'inviato' : 'ricevuto'">
                             <div>{{msg.message}}</div>
-
-
+                            
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="triggerId"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
