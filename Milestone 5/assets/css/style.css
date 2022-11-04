@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bannerup: #009688;
+    --bannerbottom: #D9DBD5;
+    --var-notifica: #84C4E3;
+    --var-iconeprofilo: #A3A0A0;
+    --var-profilo: #D6D3D3;
+    --var-chatattiva: #D6D4D4;
+    --var-backgroundsearch: #E5E1E1;
+    --var-searchinput: #E9E6E6;
+
+
+
+}
+
+.background {
+    position: relative;
+}
+
+.banner_up {
+    background-color: var(--bannerup);
+    height: 20vh;
+}
+
+.banner_bottom {
+    background-color: var(--bannerbottom);
+    height: 80vh;
+}
+
+.main_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    max-width: 1200px;
+    width: 100%;
+    background-color: aqua;
+    margin: auto;
+}
+
+/* region Box Sinistro */
+
+.left_box {
+    width: 30%;
+    height: 100%;
+    background-color:  #E9E6E6;
+}
+
+
+.profile_box {
+    height: 8vh;
+    width: 100%;
+    background-color: var(--var-profilo);
+}
+
+.user {
+    height: 100%;
+    padding: 5px;
+    align-items: center;
+}
+
+.user_profile {
+    border-radius: 32px;
+    height: 35px;
+    width: 35px;
+    margin-right: 0.5rem;
+}
+
+.user_avatar {
+    border-radius: 32px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0.5rem;
+}
+
+.alert_box {
+    height: 10vh;
+    width: 100%;
+    background-color: var(--var-notifica);
+}
+
+.search_box {
+    display: flex;
+    height: 7vh;
+    width: 100%;
+    background-color: var(--var-backgroundsearch);
+    padding: 0.25rem;
+}
+
+.chats_box {
+    height: 67vh;
+    width: 100%;
+    background-color: #E9E6E6;
+    overflow: auto;
+}
+
+.single_chat {
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.active {
+    background-color: var(--var-chatattiva);
+}
+
+/* endregion common Box Sinistro */
+
+.right_box {
+    width: 70%;
+
+    background-color: khaki;
+}
+
+.profile_chat_box {
+    height: 8%;
+    width: 100%;
+    background-color: beige;
+}
+
+.chat_box {
+    height: 84%;
+    width: 100%;
+    background-image: url(../img/mine.jpg);
+    
+}
+
+.mex_container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.time_message {
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+}
+
+.ricevuto {
+    background-color: white;
+    border-radius: 0.5rem;
+    max-width: 200px;
+    align-self: flex-start;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    position: relative;
+}
+
+.inviato {
+    background-color: green;
+    border-radius: 0.5rem;
+    max-width: 200px;
+    align-self: flex-end;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    position: relative;
+}
+
+.type_box {
+    height: 8%;
+    width: 100%;
+    background-color: var(--var-backgroundsearch);
+}
+
+.form-control{
+    width: 80%;
+}
